@@ -34,6 +34,8 @@ export class AuthHTTPService {
         auth.refreshToken = response.refreshToken;
         auth.expiresIn = new Date(Date.now() + 100 * 24 * 60 * 60 * 1000);
         auth.userId = response.user.id
+        localStorage.setItem('userData', JSON.stringify(response.user));
+
         return auth;
       })
     );

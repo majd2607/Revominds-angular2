@@ -34,6 +34,12 @@ app.post('/login', (req, res) => {
       // If user exists and password is correct, return authToken and refreshToken
       if (result.recordset.length > 0) {
         const user = result.recordset[0];
+            // Trim all user attributes
+    Object.keys(user).forEach(key => {
+      if (typeof user[key] === 'string') {
+          user[key] = user[key].trim();
+      }
+  });
         const authToken = uuid.v4(); // Generate authToken (simplified with UUID)
         const refreshToken = uuid.v4(); // Generate refreshToken (simplified with UUID)
         res.status(200).json({ authToken, refreshToken, user });

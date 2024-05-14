@@ -1,53 +1,7 @@
 <!--begin::Row-->
 <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-  <iframe title="LASTrevo (4)" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=73f4c58d-b1ba-440b-addf-278f5337549f&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
-
-  <!--begin::Col-->
-
-  <!--end::Col-->
-
-  <!--begin::Col-->
- 
-  <!--end::Col-->
-
-
-  <!--begin::Col-->
-  <!--end::Col-->
+  <iframe *ngIf="userRole === 'StpaQual_M' " title="qualiteSTPA" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=7009001c-471b-48d1-9ee6-288c3eedfc0d&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+  <iframe *ngIf="userRole === 'AlcoQual_M' " title="quali_Alco" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e79ee716-4c75-4a09-bf40-68f1d4ca3e12&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+  <iframe *ngIf="userRole === 'StpaLogi_M' " title="logisSTPA" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2d1cc923-3721-46e0-855c-0c13ed825a98&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+  <iframe *ngIf="userRole === 'DG' " title="ALL" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=9f0144a7-1de3-401b-aebd-73235f67984a&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
 </div>
-<!--end::Row-->
-
-<!--begin::Row-->
-<div class="row gx-5 gx-xl-10">
-  <!--begin::Col-->
-
-  <!--end::Col-->
-
-  <!--begin::Col-->
-
-  <!--end::Col-->
-</div>
-<!--end::Row-->
-
-<!-- begin::Row -->
-<div class="row gy-5 gx-xl-8">
- 
-
-</div>
-<!-- end::Row -->
-
-<!-- begin::Row -->
-<div class="row gy-5 g-xl-8">
- 
- 
-</div>
-<!-- end::Row -->
-
-
-
-<!-- begin:: Modal example -->
-<!-- <app-modal #modal [modalConfig]="modalConfig">
-  Modal body html
-</app-modal>
-<button class="btn btn-primary" (click)="openModal()">Open modal</button> -->
-<!-- Note: Don't forget import ModalsModule (from _metronic/partials) into your module -->
-<!-- end:: Modal example -->
