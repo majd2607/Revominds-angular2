@@ -15,6 +15,10 @@ const Routing: Routes = [
     loadChildren: () => import('./clustering/clustering.module').then((m) => m.ClusteringModule),
   },
   {
+    path: 'recommandation',
+    loadChildren: () => import('./recommandation/recommandation.module').then((m) => m.RecommandationModule),
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',
