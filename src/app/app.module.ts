@@ -15,7 +15,6 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
 import { FormsModule } from '@angular/forms';
-import { WeatherConditionComponent } from './pages/weather-condition/weather-condition.component';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {

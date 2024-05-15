@@ -11,5 +11,4 @@ export class SidebarMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

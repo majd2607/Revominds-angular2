@@ -1,0 +1,14 @@
+<!-- random-forest.component.html -->
+
+<form #predictionForm="ngForm" (ngSubmit)="predictRandomForest()">
+    <div class="form-group">
+      <label for="Qt_BL_qx">Qt_BL_qx</label>
+      <input type="number" class="form-control" id="Qt_BL_qx" name="Qt_BL_qx" [(ngModel)]="formData.Qt_BL_qx" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+  
+  <div *ngIf="prediction">
+    <p>Prediction: {{ prediction }}</p>
+  </div>
+  

@@ -23,6 +23,10 @@ const Routing: Routes = [
     loadChildren: () => import('./weather-condition/weather-condition.module').then((m) => m.WeatherConditionModule),
   },
   {
+    path: 'regressionLin',
+    loadChildren: () => import('./regression-lin/regression-lin.module').then((m) => m.RegressionLinModule),
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',

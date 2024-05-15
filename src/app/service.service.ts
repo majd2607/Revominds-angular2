@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { data } from 'jquery';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -25,6 +26,8 @@ export class Service {
   adjustTravelTime(travelData: any): Observable<any> {
     return this.http.post<any>('http://localhost:8780/adjust_travel_time', travelData);
   }
-
+  predictRandomForest(inputQt_BL_qx: any): Observable<any> {
+    return this.http.post<any>('http://localhost:5550/predict/random_forest', inputQt_BL_qx);
+  }
   
 }
