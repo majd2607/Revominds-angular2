@@ -19,6 +19,10 @@ const Routing: Routes = [
     loadChildren: () => import('./recommandation/recommandation.module').then((m) => m.RecommandationModule),
   },
   {
+    path: 'weatherCondition',
+    loadChildren: () => import('./weather-condition/weather-condition.module').then((m) => m.WeatherConditionModule),
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',

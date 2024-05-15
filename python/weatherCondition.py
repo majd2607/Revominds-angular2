@@ -3,7 +3,11 @@ from sqlalchemy import create_engine
 import pandas as pd
 import requests
 
+from flask_cors import CORS  # Import CORS class    
 app = Flask(__name__)
+
+CORS(app)  # Add this line to enable CORS for all routes
+
 
 # Database credentials and connection string
 dbname = 'lastberasmiNchalah'

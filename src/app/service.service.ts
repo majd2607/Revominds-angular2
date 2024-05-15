@@ -22,5 +22,9 @@ export class Service {
   getRecommendations(userId: number): Observable<any> {
     return this.http.get<any>(`http://127.0.0.1:5001/recommendations/${userId}`);
   }
+  adjustTravelTime(travelData: any): Observable<any> {
+    return this.http.post<any>('http://localhost:8780/adjust_travel_time', travelData);
+  }
+
   
 }
