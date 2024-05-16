@@ -27,6 +27,14 @@ const Routing: Routes = [
     loadChildren: () => import('./regression-lin/regression-lin.module').then((m) => m.RegressionLinModule),
   },
   {
+    path: 'regressionLinAlco',
+    loadChildren: () => import('./linear-regression-alco/linear-regression-alco.module').then((m) => m.LinearRegressionAlcoModule),
+  },
+  {
+    path: 'clusteringAlco',
+    loadChildren: () => import('./alco-clustering/alco-clustering.module').then((m) => m.AlcoClusteringModule),
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',

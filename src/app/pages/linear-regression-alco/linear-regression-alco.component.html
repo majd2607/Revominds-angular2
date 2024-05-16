@@ -1,0 +1,44 @@
+<form [formGroup]="predictionForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Humidité:</label>
+      <input formControlName="Humidite" type="number">
+    </div>
+    <div>
+      <label>Protéine:</label>
+      <input formControlName="Proteine" type="number">
+    </div>
+    <div>
+      <label>Dureté:</label>
+      <input formControlName="Durete" type="number">
+    </div>
+    <div>
+      <label>Aw:</label>
+      <input formControlName="Aw" type="number" step="0.1">
+    </div>
+    <div>
+      <label>Fine:</label>
+      <input formControlName="Fine" type="number" step="0.1">
+    </div>
+    <div>
+      <label>Cendre:</label>
+      <input formControlName="Cendre" type="number">
+    </div>
+    <div>
+      <label>Fibre:</label>
+      <input formControlName="Fibre" type="number">
+    </div>
+    <div>
+      <label>Amidon:</label>
+      <input formControlName="Amidon" type="number">
+    </div>
+    <button type="submit" [disabled]="!predictionForm.valid">Get Prediction</button>
+  </form>
+  
+  <div *ngIf="result">
+    <p>Prediction: {{ result.prediction }}</p>
+    <p>Prediction Class: {{ result.prediction_class }}</p>
+  </div>
+  <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  

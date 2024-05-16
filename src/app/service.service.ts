@@ -29,5 +29,8 @@ export class Service {
   predictRandomForest(inputQt_BL_qx: any): Observable<any> {
     return this.http.post<any>('http://localhost:5550/predict/random_forest', inputQt_BL_qx);
   }
+  getPredictionLinearReg(data: any): Observable<any> {
+    return this.http.post<any>('http://127.0.0.1:6001/predict', data);
+  }
   
 }
