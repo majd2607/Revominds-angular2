@@ -3,7 +3,7 @@
   <!--begin::Menu-->
   <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
     <!-- Dashboard -->
-    <div class="menu-item">
+    <div  class="menu-item">
       <a class="menu-link without-sub" routerLink="/dashboard" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -15,7 +15,7 @@
     </div>
     
       <!-- Clustering -->
-    <div class="menu-item">
+    <div *ngIf="userRole === 'StpaLogi_M' || userRole === 'DG'" class="menu-item">
       <a class="menu-link without-sub" routerLink="/clustering" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -28,7 +28,7 @@
     
    
     <!-- Recommandation -->
-    <div class="menu-item">
+    <div *ngIf="userRole === 'StpaLogi_M' || userRole === 'DG'" class="menu-item">
       <a class="menu-link without-sub" routerLink="/recommandation" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -40,7 +40,7 @@
     </div>
          <!-- weather -->
 
-         <div class="menu-item">
+         <div *ngIf="userRole === 'StpaLogi_M' || userRole === 'DG'" class="menu-item">
           <a class="menu-link without-sub" routerLink="/weatherCondition" routerLinkActive="active">
             <span class="menu-icon">
               <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -52,7 +52,7 @@
         </div>
              <!-- regressionLin -->
 
-    <div class="menu-item">
+    <div *ngIf="userRole === 'StpaLogi_M' || userRole === 'DG'" class="menu-item">
       <a class="menu-link without-sub" routerLink="/regressionLin" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -62,7 +62,7 @@
     ">Lineaire Regression</span>
       </a>
     </div>
-    <div class="menu-item">
+    <div *ngIf="userRole === 'AlcoQual_M' || userRole === 'DG'" class="menu-item">
       <a class="menu-link without-sub" routerLink="clusteringAlco" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
@@ -72,7 +72,7 @@
     ">Alco Clustering</span>
       </a>
     </div>
-    <div class="menu-item">
+    <div *ngIf="userRole === 'AlcoQual_M' || userRole === 'DG'" class="menu-item">
       <a class="menu-link without-sub" routerLink="/regressionLinAlco" routerLinkActive="active">
         <span class="menu-icon">
           <app-keenicon name="element-11" class="fs-2"></app-keenicon>
