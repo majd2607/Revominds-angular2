@@ -32,5 +32,8 @@ export class Service {
   getPredictionLinearReg(data: any): Observable<any> {
     return this.http.post<any>('http://127.0.0.1:6001/predict', data);
   }
+  getClusteringAlco(data: any): Observable<any> {
+    return this.http.post<any>('http://127.0.0.1:6002/cluster', data);
+  }
   
 }

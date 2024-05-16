@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AlcoClusteringRoutingModule } from './alco-clustering-routing.module';
 import { AlcoClusteringComponent } from './alco-clustering.component';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
         component: AlcoClusteringComponent,
       },
   ]),
-  FormsModule
+  FormsModule,
+  ReactiveFormsModule
   ]
 })
 export class AlcoClusteringModule { }

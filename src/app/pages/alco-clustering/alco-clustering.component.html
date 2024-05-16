@@ -1,1 +1,27 @@
-<p>alco-clustering works!</p>
+<form [formGroup]="clusteringForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Humidité:</label>
+      <input formControlName="humidite" type="number" min="0" step="0.1">
+      <div *ngIf="clusteringForm.get('humidite')?.touched && clusteringForm.get('humidite')?.errors">
+        <p *ngIf="clusteringForm.get('humidite')?.errors?.required">Humidité is required.</p>
+        <p *ngIf="clusteringForm.get('humidite')?.errors?.min">Humidité must be a positive number.</p>
+      </div>
+    </div>
+    <div>
+      <label>Fine:</label>
+      <input formControlName="fine" type="number" min="0" step="0.1">
+      <div *ngIf="clusteringForm.get('fine')?.touched && clusteringForm.get('fine')?.errors">
+        <p *ngIf="clusteringForm.get('fine')?.errors?.required">Fine is required.</p>
+        <p *ngIf="clusteringForm.get('fine')?.errors?.min">Fine must be a positive number.</p>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!clusteringForm.valid">Submit for Clustering</button>
+  </form>
+  
+  <div *ngIf="result">
+    <p>Cluster: {{ result?.cluster }}</p>
+  </div>
+  <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  
